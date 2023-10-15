@@ -116,7 +116,7 @@ static double machTimeToSecs(uint64_t time)
     if (m > 10)
     {
         putText(inputFrame, "Ball in!!!", cv::Point(40, 40),
-        CV_FONT_HERSHEY_COMPLEX, 1, CV_RGB(0, 255, 0), 2);
+        CV_FONT_HERSHEY_COMPLEX, 1, CV_RGB(0, 255, 0), 2);   //Green color	
     }
 
     ballBack.copyTo(inputFrame(cv::Rect(40, 300, rcBallIn.width, rcBallIn.height)));
