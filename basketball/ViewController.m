@@ -66,11 +66,11 @@
 }
 
 - (IBAction)NewButtonPressed:(id)sender {
-    
+
 }
 
 - (IBAction)ClearScoreButtonPressed:(id)sender {
-    
+    intScore = 0;
 }
 
 - (IBAction)stopCaptureButtonPressed:(id)sender {
