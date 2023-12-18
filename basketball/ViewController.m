@@ -140,6 +140,9 @@ static double machTimeToSecs(uint64_t time)
     
     cv::rectangle(inputFrame, rcBallIn, CV_RGB(0, 255, 0), 2);
     putText(inputFrame, "basket", cv::Point(150, 185),CV_FONT_HERSHEY_COMPLEX, 0.5, CV_RGB(0, 255, 0), 1);
+    putText(inputFrame, "init", cv::Point(55, 375),CV_FONT_HERSHEY_COMPLEX, 0.4, CV_RGB(0, 255, 0), 1);
+    putText(inputFrame, "current", cv::Point(100, 375),CV_FONT_HERSHEY_COMPLEX, 0.4, CV_RGB(0, 255, 0), 1);
+    putText(inputFrame, "compare", cv::Point(160, 375),CV_FONT_HERSHEY_COMPLEX, 0.4, CV_RGB(0, 255, 0), 1);
     
     
     m_array[m_tail] = m;
