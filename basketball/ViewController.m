@@ -126,11 +126,13 @@ static double machTimeToSecs(uint64_t time)
         //判断m值是否发生过变化，避免一次进球多次计分
         if (m_array[(m_tail-1 + 200)%200] <= 10) {
             intScore ++;
+            putText(inputFrame, "Ball in!!!", cv::Point(40, 40),
+                CV_FONT_HERSHEY_COMPLEX, 1, CV_RGB(255, 255, 255), 2);   //Green color
         }
-        NSString *str1 = [NSString stringWithFormat:@"Ball in!!!  %d",intScore];
-        putText(inputFrame, [str1 UTF8String], cv::Point(40, 40),
-            CV_FONT_HERSHEY_COMPLEX, 1, CV_RGB(0, 255, 0), 2);   //Green color
     }
+    NSString *str1 = [NSString stringWithFormat:@"Scoring  %d",intScore];
+    putText(inputFrame, [str1 UTF8String], cv::Point(250, 40),
+        CV_FONT_HERSHEY_COMPLEX, 1, CV_RGB(255, 255, 255), 2);   //Green color
 
     ballBack.copyTo(inputFrame(cv::Rect(40, 300, rcBallIn.width, rcBallIn.height)));
     ballCurrent.copyTo(inputFrame(cv::Rect(100, 300, rcBallIn.width, rcBallIn.height)));
