@@ -25,14 +25,19 @@
     
     double m_array[200];
     int m_tail;
+    
+    int intScore;
 }
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *startCaptureButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *stopCaptureButton;
+
 - (IBAction)startCaptureButtonPressed:(id)sender;
 - (IBAction)stopCaptureButtonPressed:(id)sender;
+- (IBAction)ClearScoreButtonPressed:(id)sender;
+- (IBAction)NewButtonPressed:(id)sender;
 
 @end
 
